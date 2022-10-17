@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>SuriLiu 刘苏日</title>
+<head>
+<body>
+	<script language="javascript" type="text/javascript">
+	function dyniframesize(down) {
+	var pTar = null;
+	if (document.getElementById){
+	pTar = document.getElementById(down);
+	}
+	else{
+	eval('pTar = ' + down + ';');
+	}
+	if (pTar && !window.opera){
+	//begin resizing iframe
+	pTar.style.display="block"
+	if (pTar.contentDocument && pTar.contentDocument.body.offsetHeight){
+	//ns6 syntax
+	pTar.height = pTar.contentDocument.body.offsetHeight +20;
+	pTar.width = pTar.contentDocument.body.scrollWidth+20;
+	}
+	else if (pTar.Document && pTar.Document.body.scrollHeight){
+	//ie5+ syntax
+	pTar.height = pTar.Document.body.scrollHeight;
+	pTar.width = pTar.Document.body.scrollWidth;
+	}
+	}
+	}
+	</script>
+	
+	<iframe src="./pdf/SuriLiu_cv.pdf" frameborder="0" marginheight="0" marginwidth="0" frameborder="0" allowtransparency="no" scrolling="0" id="ifm" name="ifm" height="2400" width="100%">
+	</iframe>
+</body>
+</html>
